@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Readex+Pro:wght@300;400&display=swap');
+
+:root {
+    --primary: rgb(10, 10, 10);
+    --secondary: rgb(245, 245, 245);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: var(--primary);
+    font-family: 'Readex Pro', sans-serif;
+    color: var(--secondary);
+}
+header {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+h1.heroTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 600%;
+}
+button.cta {
+    display: flex;
+    margin: 5% auto;
+    padding: 1% 4%;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    color: var(--secondary);
+    border-radius: 40px;
+    font-size: 200%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+button.cta:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    transform: scale(1.1);
+}
