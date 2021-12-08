@@ -1,0 +1,47 @@
+.gallery {
+    display: flex;
+    padding: 2px;
+    transition: 0.3s;
+}
+.galleryColumn {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.galleryThumb:hover .galleryCaption {
+    opacity: 1;
+}
+.galleryThumb {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    max-height: 50vh;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+.galleryThumb.notVisible {
+    opacity: 0.2;
+    filter: grayscale(1);
+}
+.galleryImage {
+    display: flex;
+    max-width: 25vw;
+    margin: auto;
+    transition: all 0.4s ease;
+}
+.galleryImage:hover {
+    transform: scale(1.1);
+}
+.galleryCaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px 15px 15px;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.3s;
+}

@@ -4,7 +4,6 @@
     --primary: rgb(10, 10, 10);
     --secondary: rgb(245, 245, 245);
 }
-
 * {
     padding: 0;
     margin: 0;
@@ -20,22 +19,35 @@ header {
     width: 100vw;
     flex-direction: column;
     justify-content: flex-end;
+    transition: all 0.4s ease;
 }
 h1.heroTitle {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     text-align: center;
     font-size: 600%;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+.heroTitle.notVisible {
+    opacity: 0;
+}
+.heroTitle.center {
+    display: flex;
+    margin: auto;
+}
+.heroTitle.lightTheme {
+    color: var(--primary);
 }
 button.cta {
     display: flex;
     margin: 5% auto;
-    padding: 1% 4%;
+    padding: 2% 4%;
     text-transform: uppercase;
     border: none;
     background-color: transparent;
     color: var(--secondary);
-    border-radius: 40px;
+    border-radius: 50px;
     font-size: 200%;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -44,4 +56,44 @@ button.cta:hover {
     background-color: var(--secondary);
     color: var(--primary);
     transform: scale(1.1);
+}
+.cta.notVisible {
+    opacity: 0;
+}
+main {
+    background-color: var(--secondary);
+    width: 100vw;
+    height: fit-content;
+    transition: all 0.4s ease;
+}
+main.notVisible .gallery {
+    height: 0;
+}
+p.scrollDown {
+    position: absolute;
+    left: 2%;
+    font-size: 140%;
+    color: var(--primary);
+    transform: rotate(90deg);
+    width: fit-content;
+    margin-bottom: 10%;
+    background: linear-gradient(120deg, var(--secondary) 0%, var(--primary) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 10%;
+    background-position: 10% 100%;
+    animation: jump 0.6s ease-in infinite alternate;
+    transition: all 0.4s ease;
+}
+p.scrollDown.notVisible {
+    opacity: 0;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0%;
+    }
+    
+    100% {
+        bottom: -5%;
+    }
 }

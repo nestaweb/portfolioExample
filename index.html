@@ -7,13 +7,27 @@
         <title>Home | Gallerie</title>
 
         <link rel="stylesheet" href="./styles/default.css">
+        <link rel="stylesheet" href="./styles/gallery.css">
     </head>
-    <body>
+    <body onload="load()">
         <header>
             <h1 class="heroTitle">From an idea to an experience</h1>
-            <button class="cta">Discover</button>
+            <button class="cta" onclick="start()">Discover</button>
+            <p class="scrollDown notVisible">Scroll Down</p>
         </header>
-        
+        <main class="notVisible">
+            <div class="gallery">
+                <div class="galleryColumn gallery0"></div>
+                
+                <div class="galleryColumn gallery1"></div>
+                
+                <div class="galleryColumn gallery2"></div>
+                
+                <div class="galleryColumn gallery3"></div>
+            </div>
+        </main>
+        <script src="./js/data.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/intersectionObserver.js"></script>
     </body>
 </html>
